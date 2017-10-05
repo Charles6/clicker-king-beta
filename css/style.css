@@ -1,0 +1,76 @@
+body{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    color:darkred;
+    font-family: sans-serif;
+    background-color: grey;
+}
+h1{
+    margin: 0px;
+}
+#leaderboardContainer{
+    text-align: center;
+    width: 600px;
+    border: solid darkred 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: white;
+}
+
+#best5{
+    margin:10px;
+    border:1px solid darkred;
+}
+
+
+#interfaceContainer{
+    text-align: center;
+}
+
+#info{
+    background-color:white;
+    border:solid darkred 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-align: center;
+    width:400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#info table{
+    background-color: darkred;
+    width: 200px;
+    padding: 20px;
+    margin:10px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button{
+    margin: 20px;
+    background-color: darkred;
+    border: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    color: white;
+    font-size: 35px;
+}
+
+#display{
+    font-size:100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ranking{
+    margin: 5px;
+    padding: 5px;
+    background-color: darkred;
+    color:white;
+    display:flex;
+    justify-content:left;
+}
+
+.rankingPerson{
+    margin-left: 10px;
+}

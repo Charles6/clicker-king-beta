@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clicker King</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+    </head>
+    <body>
+        
+        <div id="leaderboardContainer">
+            <h1>Clicker King</h1>
+            <h2>Leaderboard</h2>
+            <div id="best5">
+                <div class="ranking">
+                    <h1 id="one"></h1>
+                </div>
+                <div class="ranking">
+                    <h1 id="two"></h1>
+                </div>
+                <div class="ranking">
+                    <h1 id="three"></h1>
+                </div>
+                <div class="ranking">
+                    <h1 id="four"></h1>
+                </div>
+                <div class="ranking">
+                    <h1 id="five"></h1>
+                </div>
+            </div>
+        </div>
+        
+        <div id="interfaceContainer">
+            <h1>Click as fast as you can in 15 seconds!</h1>
+            
+            <div id="info">
+                <table>
+                    <tr>
+                        <th>Name:</th>
+                        <td><input id="nameInput" type="text"></td>
+                    </tr>
+                </table>
+                <button onclick="start()">Start Game</button>
+            </div>
+            
+            <div id="display"></div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+        <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyC8Nnflgv4Vw73wG-zZQYpHBejXv-K_f1U",
+            authDomain: "clicker-king.firebaseapp.com",
+            databaseURL: "https://clicker-king.firebaseio.com",
+            projectId: "clicker-king",
+            storageBucket: "clicker-king.appspot.com",
+            messagingSenderId: "1017363290598"
+          };
+          firebase.initializeApp(config);
+        </script>
+        <script src="js/game.js"></script>
+        <script>
+            getRanking();
+            console.log(localRanking);
+        </script>
+        <!--<script src="js/firebase.js"></script>-->
+    </body>
+</html>

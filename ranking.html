@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rank King</title>
+    <style>
+      body{
+        background-color: gray;
+        font-color:white;
+        font-family: sans-serif;
+      }
+      #container{
+        margin: 20px;
+        padding: 20px;
+        border: double magenta 10px;
+      }
+      .rankDiv{
+        background-color: magenta;
+        height: 50px;
+        font-size: 30px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="container">
+      <div class="rankDiv"></div>
+      <div class="rankDiv"></div>
+      <div class="rankDiv"></div>
+      <div class="rankDiv"></div>
+      <div class="rankDiv"></div>
+    </div>
+
+    <h3>rank</h3>
+    <input type="text" id="number">
+    <h3>item</h3>
+    <input type="text" id="item">
+    <button onclick="add2List()">refresh</button>
+
+    <script type="text/javascript">
+      var rankList = [
+        "banana",
+        "blueberry",
+        "apple",
+        "orange",
+        "grape"
+      ];
+
+      var counter = 0;
+
+
+      const refresh = () => {
+        var rank = counter + 1;
+        var rankLength = rankList.length - 1;
+        if( counter <= rankLength){
+   
+          document.getElementsByClassName("rankDiv")[counter].innerHTML = rank + ") " + rankList[counter];
+
+          console.log(rankList[counter]+ " "+counter + ":" + rankLength);
+          counter++;
+          refresh();
+        }
+        
+      }
+
+      const add2List = (rank,item) => {
+        var rankNum = document.getElementById("number").value - 1;
+        var itemName = document.getElementById("item").value;
+        console.log(rankNum + " " + itemName);
+        rankList.splice(rankNum,0,itemName);
+        console.log(rankList);
+        rankList.pop();
+        console.log(rankList + counter);
+        refresh();
+      }
+      refresh();
+      setInterval(function(){counter=0;refresh();},1000);
+    </script>
+  </body>
+</html>
+
+
